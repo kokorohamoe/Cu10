@@ -19,7 +19,7 @@
 #elif defined __PAIZACC__
 //    #include <cuddea_runtime.h>
 //      use dmy code include 
-    #include "Cuda_dmy.h"
+//    #include "Cuda_dmy.h"
 #elif defined __clang__ 
     #include <cuda_runtime.h>
 #elif defined __GNUC_
