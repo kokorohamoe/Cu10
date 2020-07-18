@@ -1,4 +1,4 @@
-// Cu10 Tensor vs Matrox.cpp
+// Cu10 Tensor vs Matrox.cpp if no cuda dmy code
 // Cu09 Tensor vs Matrox.cpp
 //
 //
