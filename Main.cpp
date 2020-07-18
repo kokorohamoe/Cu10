@@ -130,7 +130,7 @@ clock_start;
     int count =-1;
     for(int i=0;i<N;i++){ if(dst[i]==775) count++;dst[i]=0; /*trick add $0.1*/}
     
-    std::cout <<"simple copy == "<<count <<std::endl;
+    std::cout <<"simple cuda copy == "<<count <<std::endl;
     clock_out;
     std::cout <<std::endl;
 
