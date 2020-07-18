@@ -85,6 +85,8 @@ int main( CUDA_ARG ){
         thread>>>
 #endif
     (dst,src);
+    cudaDeviceSynchronize();
+
     
     int count =-1;
     for(int i=0;i<N;i++){ if(dst[i]==775) count++;}
