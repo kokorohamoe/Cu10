@@ -107,6 +107,14 @@ clock_stop;
     std::cout <<"simple　for copy == "<<count <<std::endl;
     clock_out;
     std::cout <<std::endl;
+    for(int i=0;i<N;i++){src[i]=117;}
+clock_start;
+    for(int i=0;i<N;i++){dst[i]=src[i];}
+clock_stop;
+    for(int i=0;i<N;i++){ if(dst[i]==117) count++;dst[i]=0; /*trick add $0.1*/}
+    std::cout <<"simple　for copy 2nd  == "<<count <<std::endl;
+    clock_out;
+    std::cout <<std::endl;
 
     for(int i=0;i<N;i++){src[i]=775;}
 
