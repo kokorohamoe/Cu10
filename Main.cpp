@@ -72,6 +72,12 @@ int main( CUDA_ARG ){
 
     kernel
 #if defined __CUDACC__
+    std::cout <<"Support CUDA CC"<<std::endl;
+#else
+    std::cout <<"disable CUDA CC"<<std::endl;
+#endif
+
+#if defined __CUDACC__
     <<<block,
         thread>>>
 #endif
