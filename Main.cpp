@@ -28,12 +28,12 @@
 #endif
 
     //#include "Cuda_dmy.h"
-#if defined __clang__ 
+#if defined __PAIZACC__
     const int N=(1000);
+#else
+    const int N=(1000*1000);
+#endif
 
-#elif defined __GNUC__
-    const int N=(1000);
-#endif 
 
 #if 0
 
