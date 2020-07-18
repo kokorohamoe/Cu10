@@ -111,6 +111,7 @@ clock_stop;
 clock_start;
     for(int i=0;i<N;i++){dst[i]=src[i];}
 clock_stop;
+    count = 0;
     for(int i=0;i<N;i++){ if(dst[i]==117) count++;dst[i]=0; /*trick add $0.1*/}
     std::cout <<"simple　for copy 2nd  == "<<count <<std::endl;
     clock_out;
