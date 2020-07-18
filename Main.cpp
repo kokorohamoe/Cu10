@@ -60,5 +60,23 @@ using func_type = void(*)(int *,int *);
 
 int main( CUDA_ARG ){
     std::cout <<"CUDA matrix tensor test\n"<<std::flush;
-    return (int)false;
+#if defined __CUDACC__
+    dim3 block(1000);
+    dim3 thread(1000,2)
+#endif
+
+    int *dst = new int[N];
+    int *src = new int[N];
+
+    for(int i=0;i<N;i++){src[i]=775;}
+
+    kernel
+#if defined __CUDACC__
+    <<<block,
+        thread>>>
+#endif
+    (dst,src);
+    
+
+   return (int)false;
 }
