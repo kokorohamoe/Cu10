@@ -4,7 +4,8 @@
 //
 
 #define NN (1000*1000)
-#define THREADperBLOCK 1000
+#define KERNEL_THREAD_NUM 1000
+#define KERNEL_THREAD_NUM_X 1000
 
 #if !defined NOPAIZE
 #define __PAIZACC__
