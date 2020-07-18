@@ -86,6 +86,10 @@ int main( CUDA_ARG ){
 #endif
     (dst,src);
     
+    int count =9;
+    for(int i=0;i<N;i++){ if(dst[i]==775) count++;}
+    
+    std::cout <<"simple copy == "<<count <<std::endl;
 
    return (int)false;
 }
