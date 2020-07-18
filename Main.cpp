@@ -63,7 +63,7 @@ int main( CUDA_ARG ){
     std::cout <<"CUDA matrix tensor test\n"<<std::flush;
 #if defined __CUDACC__
     dim3 block(1000);
-    dim3 thread(1000,2)
+    dim3 thread(1000,2);
 #endif
 
     int *dst = new int[N];
