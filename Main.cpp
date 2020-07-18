@@ -81,6 +81,8 @@ void kernel
 using func_type = void(*)(int *,int *);
 
 int main( CUDA_ARG ){
+    int count ;
+    count = -1;
     std::cout <<"CUDA matrix tensor test\n"<<std::flush;
 #if defined __CUDACC__
     dim3 block(1000);
@@ -96,6 +98,13 @@ int main( CUDA_ARG ){
     cudaMalloc(&dst_device,sizeof(int)*N);
     cudaMalloc(&src_device,sizeof(int)*N);
 #endif
+    count = 0;
+    for(int i=0;i<N;i++){src[i]=115;}
+    for(int i=0;i<N;i++){ if(dst[i]==115) count++;dst[i]=0; /*trick add $0.1*/}
+    std::cout <<"simple　for copy == "<<count <<std::endl;
+    clock_out;
+    std::cout <<std::endl;
+
     for(int i=0;i<N;i++){src[i]=775;}
 
 #if defined __CUDACC__ && defined __CUDA_ARCH__
@@ -127,7 +136,7 @@ clock_start;
 #endif
 //    clock_out;
     
-    int count =-1;
+    count =-1;
     for(int i=0;i<N;i++){ if(dst[i]==775) count++;dst[i]=0; /*trick add $0.1*/}
     
     std::cout <<"simple cuda copy == "<<count <<std::endl;
