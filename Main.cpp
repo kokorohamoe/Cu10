@@ -106,6 +106,8 @@ int main( CUDA_ARG ){
     std::cout <<"disable CUDA CC"<<std::endl;
 #endif
 
+clock_start;
+
     kernel
 #if defined __CUDACC__
     <<<block,
@@ -116,14 +118,14 @@ int main( CUDA_ARG ){
 #if defined __CUDACC__
     cudaDeviceSynchronize();
 #endif
-
+    clock_stop;
 
 #if defined __CUDACC__
     int c=0;
     cudaGetDeviceCount(&c);
     std::cout << "disabled soft cuda / cuda device count = "<< c << std::endl;
 #endif
-
+    clock_out;
     
     int count =-1;
     for(int i=0;i<N;i++){ if(dst[i]==775) count++;}
