@@ -15,7 +15,7 @@
 
 
 #if defined __CUDACC__ 
-    #include <cuddea_runtime.h>// additional cost $0.01
+    #include <cuda_runtime.h>// additional cost $0.01
 #elif defined __PAIZACC__
 //    #include <cuddea_runtime.h>
 //      use dmy code include 
