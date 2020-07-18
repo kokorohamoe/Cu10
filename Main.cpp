@@ -91,8 +91,13 @@ int main( CUDA_ARG ){
         thread>>>
 #endif
     (dst,src);
+
 #if defined __CUDACC__
     cudaDeviceSynchronize();
+#endif
+
+
+#if defined __CUDACC__
     int c=0;
     cudaGetDeviceCount(&c);
     std::cout << "disabled soft cuda / cuda device count = "<< c << std::endl;
