@@ -131,6 +131,8 @@ clock_start;
     for(int i=0;i<N;i++){ if(dst[i]==775) count++;}
     
     std::cout <<"simple copy == "<<count <<std::endl;
+    clock_out;
+    std::cout <<std::endl;
 
 #if defined __CUDACC__
     cudaFree(src_device);
