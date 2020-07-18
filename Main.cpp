@@ -71,6 +71,10 @@ int main( CUDA_ARG ){
     int *dst_device=NULL;
     int *src_device=NULL;
 
+#if defined __CUDACC__
+    cudaMalloc(&dst_device,sizeof(int)*N);
+    cudaMalloc(&src_device,sizeof(int)*N);
+#endif
     for(int i=0;i<N;i++){src[i]=775;}
 
 #if defined __CUDACC__ && defined __CUDA_ARCH__
@@ -100,5 +104,9 @@ int main( CUDA_ARG ){
     
     std::cout <<"simple copy == "<<count <<std::endl;
 
+#if defined __CUDACC__
+    cudaFree(src_device);
+    cudaFree(dst_device);
+#endif
    return (int)false;
 }
