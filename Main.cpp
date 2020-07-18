@@ -68,6 +68,8 @@ int main( CUDA_ARG ){
 
     int *dst = new int[N];
     int *src = new int[N];
+    int *dst_device=NULL;
+    int *src_device=NULL;
 
     for(int i=0;i<N;i++){src[i]=775;}
 
