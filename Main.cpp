@@ -70,13 +70,13 @@ int main( CUDA_ARG ){
 
     for(int i=0;i<N;i++){src[i]=775;}
 
-    kernel
 #if defined __CUDACC__
     std::cout <<"Support CUDA CC"<<std::endl;
 #else
     std::cout <<"disable CUDA CC"<<std::endl;
 #endif
 
+    kernel
 #if defined __CUDACC__
     <<<block,
         thread>>>
