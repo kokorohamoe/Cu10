@@ -125,7 +125,7 @@ clock_start;
     cudaGetDeviceCount(&c);
     std::cout << "disabled soft cuda / cuda device count = "<< c << std::endl;
 #endif
-    clock_out;
+//    clock_out;
     
     int count =-1;
     for(int i=0;i<N;i++){ if(dst[i]==775) count++;}
