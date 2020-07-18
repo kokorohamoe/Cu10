@@ -85,7 +85,9 @@ int main( CUDA_ARG ){
         thread>>>
 #endif
     (dst,src);
+#if defined __CUDACC__
     cudaDeviceSynchronize();
+#endif
 
     
     int count =-1;
