@@ -34,9 +34,6 @@
     const int N=(1000*1000);
 #endif
 
-
-#if 0
-
 //Cuda compile $0.0 this code for cuda native
 //gcc support x1.5-x3,0 compile and easy dummy 
 //clang ask 
