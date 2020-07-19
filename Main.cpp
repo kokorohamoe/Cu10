@@ -4,6 +4,7 @@
 //
 
 /*
+t2
 ./a.out
 CUDA matrix tensor test
 simple　for copy == 1000
