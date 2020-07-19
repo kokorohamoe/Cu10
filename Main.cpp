@@ -186,6 +186,33 @@ clock_start;
     clock_out;
     std::cout <<std::endl;
 
+
+    int x3,x;
+    x=3;
+    
+    for(int i=0;i<N;i++){src[i]=x;}
+clock_start;
+    for(int i=0;i<N;i++){
+        volatile tx = src[i];
+        dst[i]=tx*tx*tx+tx*tx+tx+1;
+    }
+clock_stop;
+    for(int i=0;i<N;i++){ if(dst[i]==115) count++;dst[i]=0; /*trick add $0.1*/}
+    std::cout <<"simple　for pow x,3 == "<<count <<std::endl;
+    clock_out;
+    std::cout <<std::endl;
+    for(int i=0;i<N;i++){src[i]=117;}
+clock_start;
+    for(int i=0;i<N;i++){dst[i]=src[i];}
+clock_stop;
+    count = 0;
+    for(int i=0;i<N;i++){ if(dst[i]==117) count++;dst[i]=0; /*trick add $0.1*/}
+    std::cout <<"simple　for copy 2nd (cpu cache?)  == "<<count <<std::endl;
+    clock_out;
+    std::cout <<std::endl;
+
+
+
 #if defined __CUDACC__
     cudaFree(src_device);
     cudaFree(dst_device);
