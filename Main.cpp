@@ -198,7 +198,7 @@ clock_start;
     }
 clock_stop;
     for(int i=0;i<N;i++){ if(dst[i]==115) count++;dst[i]=0; /*trick add $0.1*/}
-    std::cout <<"simple　for pow x,3 == "<<count <<std::endl;
+    std::cout <<"simple　CPU for pow x,3 == "<<count <<std::endl;
     clock_out;
     std::cout <<std::endl;
 
