@@ -3,6 +3,29 @@
 //
 //
 
+/*
+./a.out
+CUDA matrix tensor test
+simple　for copy == 1000
+clock : 6.439
+
+simple　for copy 2nd (cpu cache?)  == 1000
+clock : 4.309
+
+Support CUDA CC
+disabled soft cuda / cuda device count = 1
+simple cuda copy == -1
+clock : 14.064
+*/
+
+
+[ec2-user@ip-172-30-1-138 61430f939fdeb682cb8fe7dfdd026960]$ CUDA matrix tensor test
+-bash: CUDA: command not found
+[ec2-user@ip-172-30-1-138 61430f939fdeb682cb8fe7dfdd026960]$ simple　for copy == 1000
+-bash: simple　for: command not found
+[ec2-user@ip-172-30-1-138 61430f939fdeb682cb8fe7dfdd02696
+
+
 #define NN (1000*1000)
 #define KERNEL_THREAD_NUM 1000
 #define KERNEL_THREAD_NUM_X 1000
