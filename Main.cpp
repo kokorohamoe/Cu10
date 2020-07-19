@@ -1,4 +1,4 @@
-// Cu10 Tensor vs Matrox.cpp if no cuda dmy code
+// Cu10 Tensor vs Matrox.cpp if no cuda-dmy code
 // Cu09 Tensor vs Matrox.cpp
 //
 //fork first. If you can , it is your own copy.
