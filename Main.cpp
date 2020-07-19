@@ -193,7 +193,7 @@ clock_start;
     for(int i=0;i<N;i++){src[i]=x;}
 clock_start;
     for(int i=0;i<N;i++){
-        volatile tx = src[i];
+        volatile int tx = src[i];
         dst[i]=tx*tx*tx+tx*tx+tx+1;
     }
 clock_stop;
