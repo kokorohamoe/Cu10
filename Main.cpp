@@ -78,6 +78,7 @@ float operator - (struct timespec &tv_stop,struct timespec &tv_start){
 //intel cc
 
 //Main.cpp:53:5: note: suggested alternative: ‘__sync_synchronize’
+
 #if defined __CUDACC__
     __global__ //cuda keyword
 #endif
@@ -88,6 +89,21 @@ void kernel
 ){
 #if defined __CUDACC__
             dst[blockIdx.x*KERNEL_THREAD_NUM*2+threadIdx.x] = src[blockIdx.x*KERNEL_THREAD_NUM+threadIdx.x];
+#endif
+}
+
+
+#if defined __CUDACC__
+    __global__ //cuda keyword
+#endif
+void kernel3
+(
+    int *dst,
+    int *src
+){
+#if defined __CUDACC__
+            int x = src[blockIdx.x*KERNEL_THREAD_NUM+threadIdx.x];
+            dst[blockIdx.x*KERNEL_THREAD_NUM*2+threadIdx.x] = x*x*x+x*x*+x+1;
 #endif
 }
 
