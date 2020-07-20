@@ -30,9 +30,12 @@ nvcc x.cu \
 #define KERNEL_THREAD_NUM 1000
 #define KERNEL_THREAD_NUM_X 1000
 
-#if !defined NOPAIZE
-#define __PAIZACC__
+#if defined __CUDA_ARCH__
+    #define __CUDACC__
 #elif defined __CUDA_ARCH__
+#elif defined __CUDA_ARCH__
+#else
+    #define __PAIZACC__
 #endif
 
 #include <iostream>
