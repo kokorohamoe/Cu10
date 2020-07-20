@@ -26,6 +26,8 @@ clock : 14.064
 #if !defined NOPAIZE
 #define __PAIZACC__
 #endif
+#include <iostream>
+
 #if defined __CUDACC__ 
     #include <cuda_runtime.h>// additional cost $0.01
 #elif defined __PAIZACC__
