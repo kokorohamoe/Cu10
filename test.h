@@ -10,7 +10,10 @@ class test{
         
         float time;
         
-        test(): time (-1)
+        test(): 
+            time (-1),
+            block(1),
+            thread(1)
         {
             ;
         }
