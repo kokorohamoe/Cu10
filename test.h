@@ -17,6 +17,6 @@ class test{
         {
             ;
         }
-        void run()=0;
+        virtual void run()=0;
     
 };
