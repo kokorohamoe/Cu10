@@ -33,11 +33,11 @@ nvcc x.cu \
 //enabled compiler list
 //You could modify me. If you can, fork first please.
 #if defined __CUDA_ARCH__
-    #define __CUDACC__
+    #define __CUDACC__  //this code enabled cuda.
 #elif defined __CUDA_ARCH__
 #elif defined __CUDA_ARCH__
 #else
-    #define __PAIZACC__
+    #define __PAIZACC____  //this code enabled online compiler like paiza.
 #endif
 
 #include <iostream>
