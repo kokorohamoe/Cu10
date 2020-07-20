@@ -42,6 +42,8 @@ clock : 14.064
 #else
 #endif
 
+#include "test.h"
+
     //#include "Cuda_dmy.h"
 #if defined __PAIZACC__
     const int N=(1000);
