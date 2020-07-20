@@ -32,6 +32,7 @@ nvcc x.cu \
 
 #if !defined NOPAIZE
 #define __PAIZACC__
+#elif defined __CUDA_ARCH__
 #endif
 
 #include <iostream>
