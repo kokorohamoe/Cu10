@@ -48,6 +48,7 @@ nvcc x.cu \
 //    #include <cuddea_runtime.h>
 //      use dmy code include 
 //    #include "Cuda_dmy.h"
+#define CUDA__global__
 #elif defined __clang__ 
     #include <cuda_runtime.h>
 #elif defined __GNUC_
@@ -72,11 +73,8 @@ nvcc x.cu \
 
 //Main.cpp:53:5: note: suggested alternative: ‘__sync_synchronize’
 
-#if defined __CUDACC__
-    __global__ //cuda keyword
-#endif
-void kernel
-(
+//cuda keyword
+CUDA__global__ void kernel (
     int *dst,
     int *src
 ){
