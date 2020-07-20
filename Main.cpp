@@ -114,7 +114,7 @@ int main( CUDA_ARG ){
     int *src_device=NULL;
 
 #if defined __CUDACC__
-    cudaMalloc(&dst_device,sizeof(int)*N*1.2);
+    cudaMalloc(&dst_device,sizeof(int)*N*1.2);//access mergin 2.2
     cudaMalloc(&src_device,sizeof(int)*N*1.2);
 #endif
     count = 0;
