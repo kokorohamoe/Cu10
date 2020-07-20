@@ -37,7 +37,7 @@ nvcc x.cu \
 #elif defined __CUDA_ARCH__
 #elif defined __CUDA_ARCH__
 #else
-    #define __PAIZACC____  //this code enabled online compiler like paiza.
+    #define __PAIZACC__  //this code enabled online compiler like paiza.
 #endif
 
 #include <iostream>
