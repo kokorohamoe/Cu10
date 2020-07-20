@@ -114,8 +114,8 @@ int main( CUDA_ARG ){
     int *src_device=NULL;
 
 #if defined __CUDACC__
-    cudaMalloc(&dst_device,sizeof(int)*N);
-    cudaMalloc(&src_device,sizeof(int)*N);
+    cudaMalloc(&dst_device,sizeof(int)*N*1.2);
+    cudaMalloc(&src_device,sizeof(int)*N*1.2);
 #endif
     count = 0;
     for(int i=0;i<N;i++){src[i]=115;}
