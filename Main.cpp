@@ -30,6 +30,8 @@ nvcc x.cu \
 #define KERNEL_THREAD_NUM 1000
 #define KERNEL_THREAD_NUM_X 1000
 
+//enabled compiler list
+//You could modify me. If you can, fork first please.
 #if defined __CUDA_ARCH__
     #define __CUDACC__
 #elif defined __CUDA_ARCH__
