@@ -1,7 +1,7 @@
 
 #if defined __CUDACC__ 
     #include <cuda_runtime.h>// additional cost $0.01
-#elif defined __PAIZACC__
+#endif
 
 class test{
     public:
