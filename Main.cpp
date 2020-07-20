@@ -18,6 +18,13 @@ disabled soft cuda / cuda device count = 1
 simple cuda copy == -1
 clock : 14.064
 */
+/*
+https://docs.nvidia.com/cuda/cuda-compiler-driver-nvcc/index.html
+nvcc x.cu \
+    --generate-code arch=compute_50,code=sm_50 \
+    --generate-code arch=compute_50,code=sm_52 \
+    --generate-code arch=compute_53,code=sm_53
+*/
 
 #define NN (1000*1000)
 #define KERNEL_THREAD_NUM 1000
